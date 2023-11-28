@@ -6,7 +6,8 @@
   "type": "module",
   "main": "main.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "ts-node --esm main.ts 10 20"
   },
   "keywords": [],
   "author": "",

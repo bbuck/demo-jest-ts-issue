@@ -3,9 +3,11 @@
   "private": true,
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "type": "module",
+  "main": "main.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "ts-node --esm main.ts"
   },
   "keywords": [],
   "author": "",
