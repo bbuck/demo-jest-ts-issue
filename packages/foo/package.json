@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "main.ts",
+  "main": "main.js",
   "scripts": {
     "test": "jest",
     "start": "ts-node --esm main.ts"
