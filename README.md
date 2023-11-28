@@ -32,9 +32,36 @@ This repo features two branches, `main` is a branch where the tests succeed and
 execution of the packages work correctly. While `demo` is a branch where the
 the tests fail but execution works correctly.
 
-TODO add diff of main to demo
+```diff
+diff --git a/packages/bar/package.json b/packages/bar/package.json
+index fbf114a..2738c7b 100644
+--- a/packages/bar/package.json
++++ b/packages/bar/package.json
+@@ -4,7 +4,7 @@
+   "version": "1.0.0",
+   "description": "",
+   "type": "module",
+-  "main": "main.ts",
++  "main": "main.js",
+   "scripts": {
+     "test": "jest",
+     "start": "ts-node --esm main.ts 10 20"
+diff --git a/packages/foo/package.json b/packages/foo/package.json
+index e364220..0cbe1d0 100644
+--- a/packages/foo/package.json
++++ b/packages/foo/package.json
+@@ -4,7 +4,7 @@
+   "version": "1.0.0",
+   "description": "",
+   "type": "module",
+-  "main": "main.ts",
++  "main": "main.js",
+   "scripts": {
+     "test": "jest",
+     "start": "ts-node --esm main.ts"
+```
 
-The key difference features above is that the `"main"` field of
+The key difference in `demo` from `main` feature above is that the `"main"` field of
 `packages/foo/package.json` and `packages/bar/package.json` point to the future
 compiled JS file location which doesn't effect execution but breaks Jest ability
 to resolve the resolve the module.
